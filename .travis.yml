@@ -3,7 +3,6 @@ os:
   - osx
 dart:
   - 3.3.0
-before_script:
   - pub get
 branches:
   only:
