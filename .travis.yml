@@ -1,11 +1,8 @@
-language: julia
+language: dart
 os:
-  - linux
   - osx
-julia:
-  - 1.0
-  - 1.1
-  - nightly
+dart:
+  - 3.3.0
 branches:
   only:
     - main
