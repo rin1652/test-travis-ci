@@ -3,6 +3,10 @@ os:
   - osx
 dart:
   - 3.3.0
+before_install:
+  - brew update
+install:
+  - brew install dart
   - pub get
 branches:
   only:
@@ -10,3 +14,5 @@ branches:
 coveralls: true
 notifications:
   email: false
+dart_task:
+  - test: --platform chrome
