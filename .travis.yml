@@ -7,6 +7,6 @@ dart:
 branches:
   only:
     - main
-: true
+coveralls: true
 notifications:
   email: false
