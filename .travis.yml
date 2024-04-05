@@ -3,11 +3,8 @@ os:
   - osx
 dart:
   - 3.3.0
-before_install:
-  - brew update
-install:
-  - brew install dart
-  - pub get
+script:
+  - dart --version
 branches:
   only:
     - main
