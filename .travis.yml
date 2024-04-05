@@ -3,11 +3,12 @@ os:
   - osx
 dart:
   - 3.3.0
+install: pub get
 script:
   - dart --version
-# branches:
-#   only:
-#     - main
+branches:
+  only:
+    - main
 coveralls: true
 notifications:
   email: false
