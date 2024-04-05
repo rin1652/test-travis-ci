@@ -1,34 +1,8 @@
-os: osx
-language: dart
-
-dart:
-  - stable
-
-before_install:
-  - brew update
-  - brew install --HEAD usbmuxd
-  - brew link usbmuxd
-  - brew install --HEAD libimobiledevice
-  - brew install ideviceinstaller
-  - brew install ios-deploy
-  - brew install cocoapods || true
-  - pod repo update
-
-install:
-  - gem install cocoapods -v '1.10.2'
-  - brew install --HEAD libimobiledevice
-  - brew install ideviceinstaller
-  - brew install ios-deploy
-  - brew install cocoapods || true
-  - pod repo update
-  - flutter pub get
-
-cache:
-  directories:
-    - $HOME/.pub-cache
-    - .dart_tool
-    - $HOME/Library/Caches/Homebrew
+language: objective-c
+xcode_workspace: PhotoMemories.xcworkspace # path to your xcodeproj folder
+xcode_scheme: PhotoMemories
+xcode_sdk: iphonesimulator11.3
+osx_image: xcode9.4
 
 script:
-  - flutter test
-  - flutter build ios
+  - xcodebuild clean build -sdk iphonesimulator -workspace PhotoMemories.xcworkspace -scheme PhotoMemories CODE_SIGNING_REQUIRED=NO
